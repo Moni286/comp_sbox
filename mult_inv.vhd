@@ -48,15 +48,38 @@ COMPONENT gf24_square is
            q : out  STD_LOGIC_VECTOR (3 downto 0));
 END COMPONENT gf24_square;
 
+COMPONENT inv_gf24 is
+    Port ( d : in  STD_LOGIC_VECTOR (3 downto 0);
+           q : out  STD_LOGIC_VECTOR (3 downto 0));
+END COMPONENT inv_gf24;
+
 COMPONENT x_lambda is
     Port ( d : in  STD_LOGIC_VECTOR (3 downto 0);
            q : out  STD_LOGIC_VECTOR (3 downto 0));
 END COMPONENT x_lambda;
 
+COMPONENT mult_gf24 is
+    Port ( d0 : in  STD_LOGIC_VECTOR (3 downto 0);
+           d1 : in  STD_LOGIC_VECTOR (3 downto 0);
+           q : out  STD_LOGIC_VECTOR (3 downto 0));
+END COMPONENT mult_gf24;
+
+COMPONENT inv_iso_mapping is
+    Port ( d0 : in  STD_LOGIC_VECTOR (3 downto 0);
+			  d1 : in  STD_LOGIC_VECTOR (3 downto 0);
+           q : out  STD_LOGIC_VECTOR (7 downto 0));
+END COMPONENT inv_iso_mapping;
+
 signal nibble0 : STD_LOGIC_VECTOR(3 downto 0);
 signal nibble1 : STD_LOGIC_VECTOR(3 downto 0);
 signal after_square : STD_LOGIC_VECTOR(3 downto 0);
 signal after_lambda : STD_LOGIC_VECTOR(3 downto 0);
+
+signal after_mult0 : STD_LOGIC_VECTOR(3 downto 0);
+signal after_inv : STD_LOGIC_VECTOR(3 downto 0);
+
+signal after_mult1 : STD_LOGIC_VECTOR(3 downto 0);
+signal after_mult2 : STD_LOGIC_VECTOR(3 downto 0);
 
 begin
 	
@@ -64,7 +87,19 @@ begin
 	x2 : gf24_square PORT MAP(nibble1, after_square);
 	xLambda : x_lambda PORT MAP(after_square, after_lambda);
 	
+	mult0 : mult_gf24 PORT MAP(nibble0 XOR nibble1, nibble0, after_mult0);
+	invGF24 : inv_gf24 PORT MAP(after_lambda XOR after_mult0, after_inv);
+	
+	mult1 : mult_gf24 PORT MAP(nibble1, after_inv, after_mult1);
+	mult2 : mult_gf24 PORT MAP(after_inv, nibble0 XOR nibble1, after_mult2);
+	
+	inv_iso : inv_iso_mapping PORT MAP(after_mult2, after_mult1, q);
+	
 end Behavioral;
+
+
+
+
 
 
 

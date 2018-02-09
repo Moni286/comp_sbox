@@ -1,0 +1,44 @@
+Running: D:\Programs\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/testbench_isim_beh.exe -prj C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/testbench_beh.prj work.testbench 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/mult_phi.vhd" into library work
+Parsing VHDL file "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/mult_gf22.vhd" into library work
+Parsing VHDL file "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/x_lambda.vhd" into library work
+Parsing VHDL file "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/mult_gf24.vhd" into library work
+WARNING:HDLCompiler:946 - "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/mult_gf24.vhd" Line 70: Actual for formal port d0 is neither a static name nor a globally static expression
+Parsing VHDL file "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/iso_mapping.vhd" into library work
+Parsing VHDL file "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/inv_iso_mapping.vhd" into library work
+Parsing VHDL file "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/inv_gf24.vhd" into library work
+Parsing VHDL file "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/gf24_square.vhd" into library work
+Parsing VHDL file "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/mult_inv.vhd" into library work
+WARNING:HDLCompiler:946 - "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/mult_inv.vhd" Line 90: Actual for formal port d0 is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/mult_inv.vhd" Line 91: Actual for formal port d is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/mult_inv.vhd" Line 94: Actual for formal port d1 is neither a static name nor a globally static expression
+Parsing VHDL file "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/affine_transformation.vhd" into library work
+Parsing VHDL file "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/whole_box.vhd" into library work
+Parsing VHDL file "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/whole_box_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling architecture behavioral of entity affine_transformation [affine_transformation_default]
+Compiling architecture behavioral of entity iso_mapping [iso_mapping_default]
+Compiling architecture behavioral of entity gf24_square [gf24_square_default]
+Compiling architecture behavioral of entity x_lambda [x_lambda_default]
+Compiling architecture behavioral of entity mult_gf22 [mult_gf22_default]
+Compiling architecture behavioral of entity mult_phi [mult_phi_default]
+Compiling architecture behavioral of entity mult_gf24 [mult_gf24_default]
+Compiling architecture behavioral of entity inv_gf24 [inv_gf24_default]
+Compiling architecture behavioral of entity inv_iso_mapping [inv_iso_mapping_default]
+Compiling architecture behavioral of entity mult_inv [mult_inv_default]
+Compiling architecture behavioral of entity whole_box [whole_box_default]
+Compiling architecture behavior of entity testbench
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 26 VHDL Units
+Built simulation executable C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/testbench_isim_beh.exe
+Fuse Memory Usage: 37828 KB
+Fuse CPU Usage: 561 ms

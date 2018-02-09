@@ -5,5 +5,20 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="946" delta="old" >"C:\Users\HP\Desktop\University\Academics\Capstone\S-Box\mult_gf24.vhd" Line 70: Actual for formal port <arg fmt="%s" index="1">d0</arg> is neither a static name nor a globally static expression
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="946" delta="old" >"C:\Users\HP\Desktop\University\Academics\Capstone\S-Box\mult_inv.vhd" Line 90: Actual for formal port <arg fmt="%s" index="1">d0</arg> is neither a static name nor a globally static expression
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="946" delta="old" >"C:\Users\HP\Desktop\University\Academics\Capstone\S-Box\mult_inv.vhd" Line 91: Actual for formal port <arg fmt="%s" index="1">d</arg> is neither a static name nor a globally static expression
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="946" delta="old" >"C:\Users\HP\Desktop\University\Academics\Capstone\S-Box\mult_inv.vhd" Line 94: Actual for formal port <arg fmt="%s" index="1">d1</arg> is neither a static name nor a globally static expression
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">clk</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
 </messages>
 

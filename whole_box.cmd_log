@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/whole_box.xst" -ofn "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/whole_box.syr" 
+xst -intstyle ise -ifn "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/whole_box.xst" -ofn "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/whole_box.syr" 

@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    14:02:08 02/08/2018 
+-- Create Date:    18:35:18 02/09/2018 
 -- Design Name: 
--- Module Name:    inv_iso_mapping - Behavioral 
+-- Module Name:    whole_box - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,24 +29,34 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity inv_iso_mapping is
-    Port ( d0 : in  STD_LOGIC_VECTOR (3 downto 0);
-			  d1 : in  STD_LOGIC_VECTOR (3 downto 0);
+entity whole_box is
+    Port ( d : in  STD_LOGIC_VECTOR (7 downto 0);
            q : out  STD_LOGIC_VECTOR (7 downto 0));
-end inv_iso_mapping;
+end whole_box;
 
-architecture Behavioral of inv_iso_mapping is
+architecture Behavioral of whole_box is
+
+COMPONENT affine_transformation is
+    Port ( d : in  STD_LOGIC_VECTOR (7 downto 0);
+           q : out  STD_LOGIC_VECTOR (7 downto 0));
+END COMPONENT affine_transformation;
+
+COMPONENT mult_inv is
+    Port ( clk : in STD_LOGIC;
+			  d : in  STD_LOGIC_VECTOR (7 downto 0);
+           q : out  STD_LOGIC_VECTOR (7 downto 0));
+END COMPONENT mult_inv;
+
+signal after_trans : STD_LOGIC_VECTOR(7 downto 0);
 
 begin
-
-	q(7) <= d1(3) XOR d1(2) XOR d1(1) XOR d0(1);
-	q(6) <= d1(2) XOR d0(2);
-	q(5) <= d1(2) XOR d1(1) XOR d0(1);
-	q(4) <= d1(2) XOR d1(1) XOR d1(0) XOR d0(2) XOR d0(1);
-	q(3) <= d1(1) XOR d1(0) XOR d0(3) XOR d0(2) XOR d0(1);
-	q(2) <= d1(3) XOR d1(0) XOR d0(3) XOR d0(2) XOR d0(1);
-	q(1) <= d1(1) XOR d1(0);
-	q(0) <= d1(2) XOR d1(1) XOR d1(0) XOR d0(2) XOR d0(0);
-
+	
+	affTrans : affine_transformation PORT MAP(d, after_trans);
+	multInv : mult_inv PORT MAP('1', after_trans, q);
+	
 end Behavioral;
+
+
+
+
 

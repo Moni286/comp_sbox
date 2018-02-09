@@ -1,4 +1,0 @@
-vhdl work "x_lambda.vhd"
-vhdl work "iso_mapping.vhd"
-vhdl work "gf24_square.vhd"
-vhdl work "mult_inv.vhd"
