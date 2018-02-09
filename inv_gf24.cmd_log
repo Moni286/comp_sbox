@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/inv_gf24.xst" -ofn "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/inv_gf24.syr" 

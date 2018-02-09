@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/iso_mapping.xst" -ofn "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/iso_mapping.syr" 
