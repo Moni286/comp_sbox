@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/testbench_isim_beh.exe" -prj "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/testbench_beh.prj" "work.testbench" 
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/whole_box_tb_isim_beh.exe" -prj "C:/Users/HP/Desktop/University/Academics/Capstone/S-Box/whole_box_tb_beh.prj" "work.whole_box_tb" 

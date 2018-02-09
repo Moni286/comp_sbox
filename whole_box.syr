@@ -3,13 +3,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: whole_box.prj
@@ -304,12 +304,12 @@ Top Level Output File Name         : whole_box.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 70
-#      LUT2                        : 3
-#      LUT3                        : 6
-#      LUT4                        : 11
-#      LUT5                        : 24
-#      LUT6                        : 26
+# BELS                             : 69
+#      LUT2                        : 4
+#      LUT3                        : 5
+#      LUT4                        : 13
+#      LUT5                        : 16
+#      LUT6                        : 31
 # IO Buffers                       : 16
 #      IBUF                        : 8
 #      OBUF                        : 8
@@ -321,14 +321,14 @@ Selected Device : 6slx16csg324-2
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                   70  out of   9112     0%  
-    Number used as Logic:                70  out of   9112     0%  
+ Number of Slice LUTs:                   69  out of   9112     0%  
+    Number used as Logic:                69  out of   9112     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     70
-   Number with an unused Flip Flop:      70  out of     70   100%  
-   Number with an unused LUT:             0  out of     70     0%  
-   Number of fully used LUT-FF pairs:     0  out of     70     0%  
+ Number of LUT Flip Flop pairs used:     69
+   Number with an unused Flip Flop:      69  out of     69   100%  
+   Number with an unused LUT:             0  out of     69     0%  
+   Number of fully used LUT-FF pairs:     0  out of     69     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
@@ -368,7 +368,7 @@ Speed Grade: -2
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 19.683ns
+   Maximum combinational path delay: 19.138ns
 
 Timing Details:
 ---------------
@@ -376,31 +376,31 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 115917 / 8
+  Total number of paths / destination ports: 93525 / 8
 -------------------------------------------------------------------------
-Delay:               19.683ns (Levels of Logic = 12)
-  Source:            d<6> (PAD)
+Delay:               19.138ns (Levels of Logic = 12)
+  Source:            d<7> (PAD)
   Destination:       q<0> (PAD)
 
-  Data Path: d<6> to q<0>
+  Data Path: d<7> to q<0>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            11   1.328   1.469  d_6_IBUF (d_6_IBUF)
-     LUT5:I0->O           15   0.254   1.610  affTrans/q<6>1 (after_trans<6>)
-     LUT6:I0->O            9   0.254   1.084  multInv/iso/Mxor_q1<2>_xo<0>1 (multInv/nibble1<2>)
-     LUT3:I1->O            4   0.250   1.234  multInv/mult0/mult0/d0[0]_d0[1]_XOR_68_o1 (multInv/mult0/mult0/d0[0]_d0[1]_XOR_68_o)
-     LUT6:I1->O            1   0.254   1.112  multInv/mult0/Mxor_q<1:0>_1_xo<0> (multInv/after_mult0<1>)
-     LUT5:I0->O           10   0.254   1.438  multInv/Mxor_after_lambda[3]_after_mult0[3]_xor_1_OUT_1_xo<0>1 (multInv/after_lambda[3]_after_mult0[3]_xor_1_OUT<1>)
-     LUT6:I1->O            3   0.254   1.221  multInv/invGF24/Mxor_q<0>_xo<0> (multInv/after_inv<0>)
+     IBUF:I->O            19   1.328   1.691  d_7_IBUF (d_7_IBUF)
+     LUT5:I0->O            1   0.254   1.112  multInv/iso/Mxor_q0<2>_xo<0>1 (multInv/nibble0<2>)
+     LUT5:I0->O            4   0.254   0.804  multInv/mult0/mult0/d0[0]_d0[1]_XOR_68_o1 (multInv/mult0/mult0/d0[0]_d0[1]_XOR_68_o)
+     LUT6:I5->O            1   0.254   1.137  multInv/mult0/Mxor_q<1:0>_1_xo<0>_SW1 (N30)
+     LUT6:I0->O           11   0.254   1.267  multInv/Mxor_after_lambda[3]_after_mult0[3]_xor_1_OUT_1_xo<0>1 (multInv/after_lambda[3]_after_mult0[3]_xor_1_OUT<1>)
+     LUT4:I1->O            3   0.235   1.221  multInv/invGF24/Mxor_q<0>_xo<0> (multInv/after_inv<0>)
      LUT6:I0->O            4   0.254   1.259  multInv/mult2/mult2/d0[0]_d1[0]_AND_2_o1 (multInv/mult2/mult2/d0[0]_d1[0]_AND_2_o)
-     LUT6:I0->O            5   0.254   1.117  multInv/mult2/Mxor_q<3:2>_0_xo<0> (multInv/after_mult2<2>)
+     LUT6:I0->O            9   0.254   1.252  multInv/mult2/Mxor_q<3:2>_0_xo<0> (multInv/after_mult2<2>)
      LUT6:I2->O            1   0.254   0.682  multInv/inv_iso/Mxor_q<0>_xo<0>_SW0 (N20)
-     LUT6:I5->O            1   0.254   0.681  multInv/inv_iso/Mxor_q<0>_xo<0> (q_0_OBUF)
+     LUT6:I5->O            5   0.254   1.271  multInv/inv_iso/Mxor_q<0>_xo<0> (after_inv<0>)
+     LUT5:I0->O            1   0.254   0.681  affTrans/q<0>1 (q_0_OBUF)
      OBUF:I->O                 2.912          q_0_OBUF (q<0>)
     ----------------------------------------
-    Total                     19.683ns (6.776ns logic, 12.907ns route)
-                                       (34.4% logic, 65.6% route)
+    Total                     19.138ns (6.761ns logic, 12.377ns route)
+                                       (35.3% logic, 64.7% route)
 
 =========================================================================
 
@@ -410,12 +410,12 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.33 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.44 secs
  
 --> 
 
-Total memory usage is 260316 kilobytes
+Total memory usage is 260572 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    5 (   0 filtered)

@@ -47,12 +47,12 @@ COMPONENT mult_inv is
            q : out  STD_LOGIC_VECTOR (7 downto 0));
 END COMPONENT mult_inv;
 
-signal after_trans : STD_LOGIC_VECTOR(7 downto 0);
+signal after_inv : STD_LOGIC_VECTOR(7 downto 0);
 
 begin
 	
-	affTrans : affine_transformation PORT MAP(d, after_trans);
-	multInv : mult_inv PORT MAP('1', after_trans, q);
+	affTrans : affine_transformation PORT MAP(after_inv, q);
+	multInv : mult_inv PORT MAP('1', d, after_inv);
 	
 end Behavioral;
 
