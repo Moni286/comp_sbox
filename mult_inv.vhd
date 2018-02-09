@@ -59,9 +59,6 @@ signal after_square : STD_LOGIC_VECTOR(3 downto 0);
 signal after_lambda : STD_LOGIC_VECTOR(3 downto 0);
 
 begin
-
-	nibble0 <= d(3 downto 0);
-	nibble1 <= d(7 downto 4);
 	
 	iso : iso_mapping PORT MAP(d, nibble0, nibble1);
 	x2 : gf24_square PORT MAP(nibble1, after_square);
